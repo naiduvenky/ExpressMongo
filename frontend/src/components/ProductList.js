@@ -32,7 +32,7 @@ const ProductList = ({ data, getProductivityData }) => {
   const [updateData, setUpdateData] = useState({})
 
   const handleEditClick = (item) => {
-    setSelectedItemId(item.id);
+    setSelectedItemId(item._id);
     setIsEditFormOpen(true);
     setUpdateData(item)
   };
@@ -127,7 +127,7 @@ const ProductList = ({ data, getProductivityData }) => {
                         <Tooltip title="Delete">
                           <IconButton
                             aria-label="delete"
-                            onClick={() => handleDeleteClick(item.id)}
+                            onClick={() => handleDeleteClick(item._id)}
                           >
                             <DeleteIcon />
                           </IconButton>
